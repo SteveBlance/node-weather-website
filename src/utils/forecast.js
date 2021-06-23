@@ -10,7 +10,7 @@ const forecast = (latitude, longitude, callback) => {
             callback(body.error.info, undefined)
         } else {
             callback(undefined, body.current.weather_descriptions[0] + ' with a temperature of ' + body.current.temperature + ' degrees feeling like ' +
-                body.current.feelslike + ' degrees, and a wind speed of ' + body.current.wind_speed + ' kilometers per hour (' + body.current.wind_dir + ').'
+                body.current.feelslike + ' degrees and a wind speed of ' + body.current.wind_speed + ' kilometers per hour (' + body.current.wind_dir + ').'
             )
         }
     })
